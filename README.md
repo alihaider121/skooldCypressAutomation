@@ -13,3 +13,8 @@ npm install
 Execute the test cases using the following command:
 
 npx cypress run
+
+
+## GitHub Actions
+For continuous integration, we recommend using GitHub Actions. Check the .github folder for configuration ideas. GitHub Actions allow you to automate your test suite on every push or pull request.
+
