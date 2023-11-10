@@ -1,0 +1,49 @@
+{
+  "name": "skoold-tutor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "scripts": {
+    "start:client": "cd client && react-scripts start",
+    "start:server": "npm run start",
+    "start": "node server/index.js",
+    "start:dev": "nodemon server/index.js",
+    "build:client": "cd client && npm install && npm run build",
+    "build": "npm run build:client",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-migrate": "cd server && sequelize db:migrate",
+    "heroku-seed": "cd server && sequelize db:seed:all",
+    "postinstall": "npm run heroku-migrate && npm run heroku-seed"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1426.0",
+    "bcrypt": "^5.1.0",
+    "cloudinary": "^1.40.0",
+    "cors": "^2.8.5",
+    "cypress": "^12.17.4",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "faker": "^5.5.3",
+    "jsonwebtoken": "^9.0.1",
+    "mailgun-js": "^0.22.0",
+    "multer": "^1.4.5-lts.1",
+    "pg": "^8.11.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.32.1",
+    "sequelize-cli": "^6.6.1",
+    "stripe": "^13.7.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0",
+    "uuid": "^9.0.1"
+  },
+  "engines": {
+    "node": "18.14.0",
+    "npm": "9.3.1"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^19.0.4",
+    "nodemon": "^3.0.1"
+  }
+}
